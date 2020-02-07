@@ -35,10 +35,10 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function generatePassword(options) {
+function generatePassword(options){
   var password = "";
 
-  for (let index = 0; index < options.length; index++) {
+  for (let i =0; i < options.length; i++) {
     if (options.uppercase) {
       password += getRandomValue(uppercase);
     }
@@ -48,16 +48,21 @@ function generatePassword(options) {
     if (options.specialChars) {
       password += getRandomValue(special);
     }
-    if (options.numericChars) {
+    if (options.numbers) {
       password += getRandomValue(numbers);
     }
+
   }
+
+ 
+  
 
   return password.slice(0, options.length);
-
-  function getRandomValue(str) {
-    return str[Math.floor(math.random()) * str.length];
-  }
 }
+  
+  function getRandomValue(str) {
+    return str[Math.floor(Math.random() * str.length)];
+  }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+  
