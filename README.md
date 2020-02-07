@@ -25,7 +25,7 @@ then at my return password function i will slice and shorten up the "string" tha
 
 
 
- https://github.com/Jtelban1/password-generator.git
+ https://jtelban1.github.io/password-generator/
 
 
 
